@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>第七题</title>
+    <script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.js"></script>
+    <style media="screen">
+      .f{
+        background: rgb(199, 23, 30);
+        width:180px;
+        padding: 0 0 0 20px;
+      }
+      .f>li{
+        list-style-type: none;
+        min-width:170px;
+        height: 40px;
+        line-height: 40px;
+        border-bottom: 1px dashed rgba(213, 213, 213, 0.2);
+        position: relative;
+        padding-right:10px;
+      }
+      .f>li>a{
+        color: white;
+        text-decoration: none;
+      }
+      span{
+        display: inline-block;
+        float: right;
+        color: white;
+      }
+      .son{
+        width: 180px;
+        padding-left: 20px;
+        position: absolute;
+        top: 0;
+        right: -201px;
+        border: 1px solid #bebebe;
+        display: none;
+      }
+      .son li{
+        width: 90px;
+        float: left;
+        list-style-type: none;
+      }
+      .son li a{
+        color: #262626;
+        text-decoration: none;
+      }
+    </style>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var len = $(".f").children().length;
+        console.log(len);
+        for (var i = 0; i < len; i++) {
+          (function(i){
+            $("ul.f>li:eq("+ i + ")").hover(function(){
+              $(".son:eq("+ i +")").css("display","block");
+              console.log(i);
+              console.log($(".son:eq("+ i +")"));
+            },function(){
+              $(".son:eq("+ i +")").css("display","none");
+            })
+          })(i)
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <ul class="f">
+      <li>
+        <a href="#">珠宝玉器</a>
+        <span>></span>
+        <ul class="son">
+          <li><a href="#">翡翠</a></li>
+          <li><a href="#">翡翠</a></li>
+          <li><a href="#">翡翠</a></li>
+          <li><a href="#">翡翠</a></li>
+          <li><a href="#">翡翠</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">珠宝玉器</a>
+        <span>></span>
+        <ul class="son">
+          <li><a href="#">翡翠</a></li>
+          <li><a href="#">翡翠</a></li>
+          <li><a href="#">翡翠</a></li>
+          <li><a href="#">翡翠</a></li>
+          <li><a href="#">翡翠</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">珠宝玉器</a>
+        <span>></span>
+        <ul class="son">
+          <li><a href="#">翡翠</a></li>
+          <li><a href="#">翡翠</a></li>
+          <li><a href="#">翡翠</a></li>
+          <li><a href="#">翡翠</a></li>
+          <li><a href="#">翡翠</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">珠宝玉器</a>
+        <span>></span>
+        <ul class="son">
+          <li><a href="#">翡翠</a></li>
+          <li><a href="#">翡翠</a></li>
+          <li><a href="#">翡翠</a></li>
+          <li><a href="#">翡翠</a></li>
+          <li><a href="#">翡翠</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">珠宝玉器</a>
+        <span>></span>
+        <ul class="son">
+          <li><a href="#">翡翠</a></li>
+          <li><a href="#">翡翠</a></li>
+          <li><a href="#">翡翠</a></li>
+          <li><a href="#">翡翠</a></li>
+          <li><a href="#">翡翠</a></li>
+        </ul>
+      </li>
+    </ul>
+  </body>
+</html>

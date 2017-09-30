@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
+    <title></title>
+    <style media="screen">
+      *{
+        padding:0;
+        margin:0;
+      }
+      a{
+        text-decoration: none;
+      }
+      ul li{
+        list-style-type: none;
+      }
+      html,body{
+        height:100%;
+      }
+      .header{
+        width:100%;
+        height:50px;
+        background: #323436;
+        float: left;
+        position: absolute;
+        z-index: 555;
+      }
+      .right{
+        width:140px;
+        height:32px;
+        margin: 8px 20px 0 0;
+        float: right;
+      }
+      .right li{
+        float:left;
+        width:70px;
+        height:32px;
+        line-height: 32px;
+        text-align: center;
+      }
+      .loginbtn{
+        background: rgb(80, 80, 80);
+      }
+      .loginbtn a{
+        color: #acacac;
+      }
+      .res{
+        background: rgb(107, 195, 13);
+      }
+      .res a{
+        color: #fff;
+      }
+      .main{
+        width:100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.83);
+        display: none;
+        position: absolute;
+      }
+      .login{
+        width:360px;
+        height: 488px;
+        margin: 0 auto;
+        position: relative;
+        top:0;
+        background: white;
+        padding: 50px 40px 0 40px;
+        position: absolute;
+        top: 0;
+        left: 38%;
+        transform: rotateX(-38%);
+        z-index: 666;
+        display: none;
+      }
+      h1,h4,h5{
+        font-weight: normal;
+      }
+      h4{
+        height: 50px;
+        line-height: 50px;
+      }
+      .login>input{
+        width: 345px;
+        margin: 10px 0;
+        height: 40px;
+        padding-left: 10px;
+      }
+      .lg{
+        width:100%;
+        padding: 20px 0;
+      }
+      .lg button{
+        width: 130px;
+        height: 40px;
+        background: rgb(152, 231, 52);
+        border: none;
+        margin-right: 10px;
+      }
+      .lg span{
+        font-size: 12px;
+        height: 40px;
+        line-height: 40px;
+      }
+      h5{
+        height: 30px;
+        line-height: 30px;
+        padding: 20px 0;
+        color:#7a7a7a;
+      }
+      .footer li{
+        float: left;
+        width: 160px;
+        height: 40px;
+        line-height: 40px;
+        margin-left: 15px;
+        text-align: center;
+      }
+      .footer li a{
+        width: 100%;
+        height: 100%;
+        display: block;
+        color: white;
+      }
+      .res_setp{
+        position: absolute;
+        top: 0;
+        z-index: 777;
+        width: 100%;
+        height: 100%;
+        background: white;
+        display: none;
+      }
+      .res_setp button{
+        width: 130px;
+        height: 40px;
+        background: rgb(152, 231, 52);
+        border: none;
+        margin-left: 30px;
+      }
+      .content{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <ul class="right">
+        <li class="loginbtn"><a href="#">登录</a></li>
+        <li class="res"><a href="#">注册</a></li>
+      </ul>
+    </div>
+
+    <div class="main"></div>
+
+    <div class="login">
+      <h1>会员登录<span style="font-size:18px;float:right;margin-top:20px;">还没有账号&nbsp;<a href="#" style="color:rgb(249, 17, 59)">立即注册</a></span></h1>
+      <h4>邮箱登录</h4>
+      <input type="text" name="" value="" placeholder="邮箱/用户名">
+      <input type="text" name="" value="" placeholder="密码">
+      <div class="lg">
+        <button type="button" name="button">登录</button>
+        <input type="checkbox" name="" value=""><span>保持登录</span>
+        <span style="float: right;">忘记密码?</span>
+      </div>
+      <hr style="width:437px; margin-left:-40px; border-top: 1px solid rgba(153, 153, 153, 0.31);">
+      <h5>使用第三方直接登录</h5>
+      <ul class="footer">
+        <li style="background: rgb(214, 59, 34);"><a href="#">微博账号登录</a></li>
+        <li style="background: rgb(62, 176, 216);"><a href="#">QQ账号登录</a></li>
+      </ul>
+    </div>
+    <div class="res_setp">
+      <h1>
+        <button class="back">返回</button>
+      </h1>
+      <div class="content">
+        <h3 style="font-weight:normal; font-size: 15px; padding: 20px 0;">您可以选择以下第三方帐号直接登录代码笔记，一分钟完成注册</h3>
+        <ul class="footer">
+          <li style="background: rgb(214, 59, 34);"><a href="#">微博账号登录</a></li>
+          <li style="background: rgb(62, 176, 216);"><a href="#">QQ账号登录</a></li>
+        </ul>
+      </div>
+    </div>
+    <script type="text/javascript">
+      $(".loginbtn").click(function(){
+        $(".main").fadeIn();
+        $(".login").slideDown();
+      });
+      $(".main").click(function(){
+        $(this).fadeOut();
+        $(".login").slideUp();
+      });
+      function res(){
+        
+      }
+      $(".res").on("click", res);
+    </script>
+  </body>
+</html>
